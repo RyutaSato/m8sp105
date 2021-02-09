@@ -16,6 +16,9 @@
 		84DE343D25D0299000133C46 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE343C25D0299000133C46 /* ThirdView.swift */; };
 		84DE344025D029AE00133C46 /* FourthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE343F25D029AE00133C46 /* FourthView.swift */; };
 		84DE344325D029BF00133C46 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE344225D029BF00133C46 /* SettingView.swift */; };
+		84DE344925D2D7BF00133C46 /* FifthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE344825D2D7BF00133C46 /* FifthView.swift */; };
+		84DE344D25D2D84C00133C46 /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE344C25D2D84C00133C46 /* EmergencyView.swift */; };
+		84DE345025D2DC9800133C46 /* EmergencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE344F25D2DC9800133C46 /* EmergencyModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		84DE343C25D0299000133C46 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
 		84DE343F25D029AE00133C46 /* FourthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthView.swift; sourceTree = "<group>"; };
 		84DE344225D029BF00133C46 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		84DE344825D2D7BF00133C46 /* FifthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthView.swift; sourceTree = "<group>"; };
+		84DE344C25D2D84C00133C46 /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
+		84DE344F25D2DC9800133C46 /* EmergencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 				84DE343C25D0299000133C46 /* ThirdView.swift */,
 				84DE343F25D029AE00133C46 /* FourthView.swift */,
 				84DE344225D029BF00133C46 /* SettingView.swift */,
+				84DE344825D2D7BF00133C46 /* FifthView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -97,6 +104,7 @@
 		84DE344625D02A0200133C46 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				84DE344C25D2D84C00133C46 /* EmergencyView.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -104,6 +112,7 @@
 		84DE344725D067CC00133C46 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				84DE344F25D2DC9800133C46 /* EmergencyModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,7 +191,10 @@
 				84DE343725D0297800133C46 /* FirstView.swift in Sources */,
 				84DE344325D029BF00133C46 /* SettingView.swift in Sources */,
 				84DE343A25D0298100133C46 /* SecondView.swift in Sources */,
+				84DE344D25D2D84C00133C46 /* EmergencyView.swift in Sources */,
 				84DE344025D029AE00133C46 /* FourthView.swift in Sources */,
+				84DE345025D2DC9800133C46 /* EmergencyModel.swift in Sources */,
+				84DE344925D2D7BF00133C46 /* FifthView.swift in Sources */,
 				84DE342125D0137900133C46 /* m8sp105App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
