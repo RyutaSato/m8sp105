@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84358DD825ECCCDB00D2441F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84358DD725ECCCDB00D2441F /* WidgetKit.framework */; };
+		84358DDA25ECCCDB00D2441F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84358DD925ECCCDB00D2441F /* SwiftUI.framework */; };
+		84358DDD25ECCCDB00D2441F /* m8sp105widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84358DDC25ECCCDB00D2441F /* m8sp105widget.swift */; };
+		84358DDF25ECCCDD00D2441F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84358DDE25ECCCDD00D2441F /* Assets.xcassets */; };
+		84358DE325ECCCDD00D2441F /* m8sp105widgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84358DD525ECCCDB00D2441F /* m8sp105widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		84DE342125D0137900133C46 /* m8sp105App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE342025D0137900133C46 /* m8sp105App.swift */; };
 		84DE342325D0137900133C46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE342225D0137900133C46 /* ContentView.swift */; };
 		84DE342525D0137A00133C46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DE342425D0137A00133C46 /* Assets.xcassets */; };
@@ -21,7 +26,37 @@
 		84DE345025D2DC9800133C46 /* EmergencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE344F25D2DC9800133C46 /* EmergencyModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		84358DE125ECCCDD00D2441F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84DE341525D0137900133C46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84358DD425ECCCDB00D2441F;
+			remoteInfo = m8sp105widgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84358DE425ECCCDD00D2441F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				84358DE325ECCCDD00D2441F /* m8sp105widgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		84358DD525ECCCDB00D2441F /* m8sp105widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = m8sp105widgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		84358DD725ECCCDB00D2441F /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		84358DD925ECCCDB00D2441F /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		84358DDC25ECCCDB00D2441F /* m8sp105widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = m8sp105widget.swift; sourceTree = "<group>"; };
+		84358DDE25ECCCDD00D2441F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84358DE025ECCCDD00D2441F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84DE341D25D0137900133C46 /* m8sp105.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = m8sp105.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DE342025D0137900133C46 /* m8sp105App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = m8sp105App.swift; sourceTree = "<group>"; };
 		84DE342225D0137900133C46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,6 +74,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		84358DD225ECCCDB00D2441F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84358DDA25ECCCDB00D2441F /* SwiftUI.framework in Frameworks */,
+				84358DD825ECCCDB00D2441F /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84DE341A25D0137900133C46 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,10 +93,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84358DD625ECCCDB00D2441F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84358DD725ECCCDB00D2441F /* WidgetKit.framework */,
+				84358DD925ECCCDB00D2441F /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84358DDB25ECCCDB00D2441F /* m8sp105widget */ = {
+			isa = PBXGroup;
+			children = (
+				84358DDC25ECCCDB00D2441F /* m8sp105widget.swift */,
+				84358DDE25ECCCDD00D2441F /* Assets.xcassets */,
+				84358DE025ECCCDD00D2441F /* Info.plist */,
+			);
+			path = m8sp105widget;
+			sourceTree = "<group>";
+		};
 		84DE341425D0137900133C46 = {
 			isa = PBXGroup;
 			children = (
 				84DE341F25D0137900133C46 /* m8sp105 */,
+				84358DDB25ECCCDB00D2441F /* m8sp105widget */,
+				84358DD625ECCCDB00D2441F /* Frameworks */,
 				84DE341E25D0137900133C46 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				84DE341D25D0137900133C46 /* m8sp105.app */,
+				84358DD525ECCCDB00D2441F /* m8sp105widgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,6 +186,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		84358DD425ECCCDB00D2441F /* m8sp105widgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84358DE725ECCCDD00D2441F /* Build configuration list for PBXNativeTarget "m8sp105widgetExtension" */;
+			buildPhases = (
+				84358DD125ECCCDB00D2441F /* Sources */,
+				84358DD225ECCCDB00D2441F /* Frameworks */,
+				84358DD325ECCCDB00D2441F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = m8sp105widgetExtension;
+			productName = m8sp105widgetExtension;
+			productReference = 84358DD525ECCCDB00D2441F /* m8sp105widgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		84DE341C25D0137900133C46 /* m8sp105 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84DE342C25D0137A00133C46 /* Build configuration list for PBXNativeTarget "m8sp105" */;
@@ -127,10 +210,12 @@
 				84DE341925D0137900133C46 /* Sources */,
 				84DE341A25D0137900133C46 /* Frameworks */,
 				84DE341B25D0137900133C46 /* Resources */,
+				84358DE425ECCCDD00D2441F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				84358DE225ECCCDD00D2441F /* PBXTargetDependency */,
 			);
 			name = m8sp105;
 			productName = m8sp105;
@@ -146,6 +231,9 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					84358DD425ECCCDB00D2441F = {
+						CreatedOnToolsVersion = 12.4;
+					};
 					84DE341C25D0137900133C46 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -165,11 +253,20 @@
 			projectRoot = "";
 			targets = (
 				84DE341C25D0137900133C46 /* m8sp105 */,
+				84358DD425ECCCDB00D2441F /* m8sp105widgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		84358DD325ECCCDB00D2441F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84358DDF25ECCCDD00D2441F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84DE341B25D0137900133C46 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -182,6 +279,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		84358DD125ECCCDB00D2441F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84358DDD25ECCCDB00D2441F /* m8sp105widget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84DE341925D0137900133C46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -201,7 +306,57 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		84358DE225ECCCDD00D2441F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84358DD425ECCCDB00D2441F /* m8sp105widgetExtension */;
+			targetProxy = 84358DE125ECCCDD00D2441F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		84358DE525ECCCDD00D2441F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G277B29VS5;
+				INFOPLIST_FILE = m8sp105widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.maron8saton.m8sp105.m8sp105widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84358DE625ECCCDD00D2441F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G277B29VS5;
+				INFOPLIST_FILE = m8sp105widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.maron8saton.m8sp105.m8sp105widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		84DE342A25D0137A00133C46 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -321,6 +476,7 @@
 		84DE342D25D0137A00133C46 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -343,6 +499,7 @@
 		84DE342E25D0137A00133C46 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -365,6 +522,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		84358DE725ECCCDD00D2441F /* Build configuration list for PBXNativeTarget "m8sp105widgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84358DE525ECCCDD00D2441F /* Debug */,
+				84358DE625ECCCDD00D2441F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		84DE341825D0137900133C46 /* Build configuration list for PBXProject "m8sp105" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
