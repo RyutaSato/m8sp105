@@ -14,10 +14,12 @@ struct EmergencyView: View {
     let name = "原初の闇"
     @State var min = 25
     @State var sec = 12
+    let components1 = DateComponents(minute:15)
     
     var body: some View {
         
         let futureDate = Calendar.current.date(byAdding: components, to: Date(),wrappingComponents: true)!
+        let futureTime = Calendar.current.date(byAdding: components1, to: Date())!
         ZStack{
             Image("sodamu")
                 .frame(width: 300.0, height: 100.0)
@@ -31,11 +33,8 @@ struct EmergencyView: View {
                     .foregroundColor(Color.white)
                     .multilineTextAlignment(.trailing)
                     .padding(5.0)
-                Text(String(min) + " : " + String(sec))
-                    .fontWeight(.heavy)
+                Text(futureTime,style:.timer)
                     .foregroundColor(Color.white)
-                    .multilineTextAlignment(.trailing)
-                    .padding(5.0)
                 
                 
                 
