@@ -59,6 +59,7 @@
 		84358DDE25ECCCDD00D2441F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84358DE025ECCCDD00D2441F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84358DED25EE975800D2441F /* preData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = preData.json; sourceTree = "<group>"; };
+		84358DF925F0019C00D2441F /* m8sp105.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = m8sp105.entitlements; sourceTree = "<group>"; };
 		84DE341D25D0137900133C46 /* m8sp105.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = m8sp105.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DE342025D0137900133C46 /* m8sp105App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = m8sp105App.swift; sourceTree = "<group>"; };
 		84DE342225D0137900133C46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -137,6 +138,7 @@
 		84DE341F25D0137900133C46 /* m8sp105 */ = {
 			isa = PBXGroup;
 			children = (
+				84358DF925F0019C00D2441F /* m8sp105.entitlements */,
 				84DE342025D0137900133C46 /* m8sp105App.swift */,
 				84DE344725D067CC00133C46 /* Model */,
 				84DE344625D02A0200133C46 /* ViewModel */,
@@ -483,6 +485,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = m8sp105/m8sp105.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"m8sp105/Preview Content\"";
 				DEVELOPMENT_TEAM = G277B29VS5;
@@ -506,6 +509,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = m8sp105/m8sp105.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"m8sp105/Preview Content\"";
 				DEVELOPMENT_TEAM = G277B29VS5;

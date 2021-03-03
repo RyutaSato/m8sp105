@@ -22,7 +22,7 @@ struct EmergencyView: View {
         let futureTime = Calendar.current.date(byAdding: components1, to: Date())!
         ZStack{
             Image("sodamu")
-                .frame(width: 300.0, height: 100.0)
+                .frame(width: UIScreen.main.bounds.width , height: 100.0)
             VStack{
                 Text(name)
                     .foregroundColor(Color.white)
@@ -78,7 +78,7 @@ func resetTime(date: Date) -> Date {
 struct EmergencyView_Previews: PreviewProvider {
     static var previews: some View {
         EmergencyView()
-            .previewLayout(.fixed(width: 300, height: 200))
+            .previewLayout(.fixed(width: UIScreen.main.bounds.width, height: 200))
             
     }
 }
