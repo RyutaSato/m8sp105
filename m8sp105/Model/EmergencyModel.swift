@@ -13,6 +13,14 @@ struct EmergencyList:Decodable{
     var date:DateComponents
     var duration:Int
 }
+enum ServerState {
+    case inMentenance
+    case inEmergencyMentenance
+    case inEmergency
+    case inLive
+    case inNomal
+    case inError
+}
 
 final class ModelData: ObservableObject {
     @Published var emergencyList: [EmergencyList] = load("preData.json")

@@ -6,6 +6,7 @@
 //
 import WidgetKit
 import SwiftUI
+import UIKit
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
@@ -65,18 +66,46 @@ struct SimpleEntry: TimelineEntry {
 
 struct m8sp105widgetEntryView : View {
     var entry: Provider.Entry
+    var serverState: ServerState = .inError
+    @State var isInEmergency = true
+    @State var isInMentenance = false
 
     var body: some View {
         let emergencyDate = Calendar.current.date(byAdding: entry.emergencyDuration, to: entry.date)!
 
         ZStack{
-            //Image("sodamu")
+            Color.init(backgroundColor(serverState: serverState))
             VStack{
                 Text(entry.date, style: .time)
-                Text(entry.emergencyName)
+                if isInMentenance{
+                    Text("PSO2はメンテナンス中です．..\n終了まで")
+                }else if isInEmergency {
+                    Text(entry.emergencyName)
+                }else{
+                    Image(systemName: "mentenance.xcassets")
+                    Text("次の緊急は")
+                }
                 Text(emergencyDate, style: .timer)
+                    .fontWeight(.heavy)
                     .multilineTextAlignment(.center)
+                    .font(.system(size: 50.0,design:.serif))
             }
+        }
+    }
+    private func backgroundColor(serverState:ServerState)->String{
+        switch serverState{
+            case .inError:
+                return "emergency"
+            case .inMentenance:
+                return "mentenance"
+            case .inNomal:
+                return "nomal"
+            case .inEmergencyMentenance:
+                return "mentenance"
+            case .inLive:
+                return "nomal"
+            case .inEmergency:
+                return "emergency"
         }
     }
 }
@@ -105,10 +134,12 @@ struct m8sp105widget_Previews: PreviewProvider {
             m8sp105widgetEntryView(entry: simpleEntry_Previews)
                 .previewContext(WidgetPreviewContext(family: .systemMedium))
             m8sp105widgetEntryView(entry: simpleEntry_Previews)
+                .previewContext(WidgetPreviewContext(family: .systemMedium))
+                .environment(\.colorScheme, .dark)
+            m8sp105widgetEntryView(entry: simpleEntry_Previews)
                 .redacted(reason: /*@START_MENU_TOKEN@*/.placeholder/*@END_MENU_TOKEN@*/)
                 .previewContext(WidgetPreviewContext(family: .systemMedium))
-            //m8sp105widgetEntryView(entry: SimpleEntry(date: Date()))
-                //.previewContext(WidgetPreviewContext(family: .systemLarge))
+            
         }
         
     }
