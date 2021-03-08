@@ -66,6 +66,7 @@
 		84358DF925F0019C00D2441F /* m8sp105.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = m8sp105.entitlements; sourceTree = "<group>"; };
 		843CD93425F51FE100D7E879 /* backgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundColor.swift; sourceTree = "<group>"; };
 		843CD93825F5240F00D7E879 /* widgetExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = widgetExtention.swift; sourceTree = "<group>"; };
+		8467D6EB25F675990079666A /* Test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Test.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		84DE341D25D0137900133C46 /* m8sp105.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = m8sp105.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DE342025D0137900133C46 /* m8sp105App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = m8sp105App.swift; sourceTree = "<group>"; };
 		84DE342225D0137900133C46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -151,6 +152,7 @@
 				84DE344725D067CC00133C46 /* Model */,
 				84DE344625D02A0200133C46 /* ViewModel */,
 				84DE342225D0137900133C46 /* ContentView.swift */,
+				8467D6EB25F675990079666A /* Test.playground */,
 				84DE343025D0293100133C46 /* View */,
 				84DE342425D0137A00133C46 /* Assets.xcassets */,
 				84DE342925D0137A00133C46 /* Info.plist */,

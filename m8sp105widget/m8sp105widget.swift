@@ -48,6 +48,14 @@ struct Provider: TimelineProvider {
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
         
+        //NEXT!!!!!!
+        func initDateFormatter() -> DateFormatter{
+            let format = DateFormatter()
+            format.locale = Locale(identifier: "Ja_JP")
+            format.dateFormat = "yyyy/MM/dd HH:mm:ss"
+            
+            return format
+        }
     }
 }
 
@@ -62,6 +70,7 @@ struct SimpleEntry: TimelineEntry {
         self.emergencyStart = emergencyStart
         self.emergencyDuration = emergencyDuration
     }
+    
 }
 
 struct m8sp105widgetEntryView : View {
@@ -69,18 +78,22 @@ struct m8sp105widgetEntryView : View {
     var serverState: ServerState = .inError
     @State var isInEmergency = true
     @State var isInMentenance = false
+    
 
     var body: some View {
         let emergencyDate = Calendar.current.date(byAdding: entry.emergencyDuration, to: entry.date)!
 
         ZStack{
-            Color.init(backgroundColor(serverState: serverState))
+            Color.init(backgroundColorName(serverState: serverState))
             VStack{
-                Text(entry.date, style: .time)
+                //Text(entry.date, style: .time)
                 if isInMentenance{
                     Text("PSO2はメンテナンス中です．..\n終了まで")
                 }else if isInEmergency {
-                    Text(entry.emergencyName)
+                    HStack{
+                        Text(entry.emergencyName)
+                        Text("発生中")
+                    }
                 }else{
                     Image(systemName: "mentenance.xcassets")
                     Text("次の緊急は")
@@ -88,11 +101,33 @@ struct m8sp105widgetEntryView : View {
                 Text(emergencyDate, style: .timer)
                     .fontWeight(.heavy)
                     .multilineTextAlignment(.center)
-                    .font(.system(size: 50.0,design:.serif))
+                    .font(.system(size: 40.0,design:.serif))
+                
+                HStack{
+                    Text("22:30")
+                        .multilineTextAlignment(.leading)
+                    //Spacer()
+                    Text("掃討作戦：夢幻のごとく")
+                        .multilineTextAlignment(.trailing)
+                }
+                HStack{
+                    Text("00:30")
+                        .multilineTextAlignment(.leading)
+                    //Spacer()
+                    Text("掃討作戦：夢幻のごとく")
+                        .multilineTextAlignment(.trailing)
+                }
+                HStack{
+                    Text("00:30")
+                        .multilineTextAlignment(.leading)
+                    //Spacer()
+                    Text("掃討作戦：夢幻のごとく")
+                        .multilineTextAlignment(.trailing)
+                }
             }
         }
     }
-    private func backgroundColor(serverState:ServerState)->String{
+    private func backgroundColorName(serverState:ServerState)->String{
         switch serverState{
             case .inError:
                 return "emergency"
@@ -108,11 +143,12 @@ struct m8sp105widgetEntryView : View {
                 return "emergency"
         }
     }
+    
 }
 
 @main
 struct m8sp105widget: Widget {
-    let kind: String = "m8sp105widget"
+    let kind: String = "PSO2NGS STATUS"
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
@@ -125,7 +161,7 @@ struct m8sp105widget: Widget {
 
 struct m8sp105widget_Previews: PreviewProvider {
     //staticは必ずつけること！！！
-    static var simpleEntry_Previews = SimpleEntry(date: Date(), emergencyName: "緊急クエスト", emergencyStart: DateComponents(year:2021, month: 3, day: 5, hour: 19, minute: 0), emergencyDuration: DateComponents(minute: 15))
+    static var simpleEntry_Previews = SimpleEntry(date: Date(), emergencyName: "虚無より睨む原初の闇", emergencyStart: DateComponents(year:2021, month: 3, day: 5, hour: 19, minute: 0), emergencyDuration: DateComponents(minute: 15))
     
     static var previews: some View {
         Group{
