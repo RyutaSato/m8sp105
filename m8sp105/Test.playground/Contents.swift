@@ -18,14 +18,16 @@ func initDateFormatter() -> DateFormatter{
     
     return format
 }
-let dtStr = "2021/03/10 12:15:00"
+let dtStr = "2021/03/10 14:30:00"
 let dateFormatter = initDateFormatter()
 let dt:Date = dateFromString(dtStr)
 
 let cal = Calendar(identifier: .gregorian)
 let date1 = Date()
 let date2 = date1.addingTimeInterval(-24 * 60)
-let diff = cal.dateComponents([.second], from: date1, to: date2)
+//let compDob = date1.distance(to: dt)
+let diff = cal.dateComponents([.second], from: date1, to: dt)
+//print(compDob.magnitude)
 
 
 print(diff.second!)

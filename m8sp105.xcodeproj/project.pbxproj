@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840996C225F888C3006A344E /* preData.json in Resources */ = {isa = PBXBuildFile; fileRef = 84358DED25EE975800D2441F /* preData.json */; };
 		84358DD825ECCCDB00D2441F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84358DD725ECCCDB00D2441F /* WidgetKit.framework */; };
 		84358DDA25ECCCDB00D2441F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84358DD925ECCCDB00D2441F /* SwiftUI.framework */; };
 		84358DDD25ECCCDB00D2441F /* m8sp105widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84358DDC25ECCCDB00D2441F /* m8sp105widget.swift */; };
@@ -279,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				843CD92E25F42E5E00D7E879 /* Assets.xcassets in Resources */,
+				840996C225F888C3006A344E /* preData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
