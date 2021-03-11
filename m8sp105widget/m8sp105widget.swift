@@ -11,11 +11,11 @@ import UIKit
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
         //ほとんど呼ばれることがないため，既定値のみで基本何も書かない
-        SimpleEntry(date: Date(), emergencyName: "(error)", emergencyStart: DateComponents(year:8888, month:8, day: 8, hour: 8, minute:88), emergencyDuration: DateComponents(minute: 88))
+        SimpleEntry(date: Date())
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), emergencyName: "(error)", emergencyStart: DateComponents(year:8888, month:8, day: 8, hour: 8, minute:88), emergencyDuration: DateComponents(minute: 88))
+        let entry = SimpleEntry(date: Date())
         if context.isPreview {
             completion(entry)
         } else {
@@ -38,7 +38,7 @@ struct Provider: TimelineProvider {
             let emergencyDuration = DateComponents(minute: 30)
             let emergencyStart = DateComponents(year:2021, month: 3, day: 4, hour: 19, minute: 0)
             */
-            let entry = SimpleEntry(date: Calendar.current.date(byAdding: .hour, value: hourOffset, to: Date())!, emergencyName: "(load error!)", emergencyStart: DateComponents(year:2021, month: 3, day: 4, hour: 19, minute: 0),emergencyDuration: DateComponents(minute: 30))
+            let entry = SimpleEntry(date: Calendar.current.date(byAdding: .hour, value: hourOffset, to: Date())!)
             entries.append(entry)
         }
         //let dateConponents = DateComponents(second:10)
@@ -49,28 +49,8 @@ struct Provider: TimelineProvider {
         completion(timeline)
         
         //NEXT!!!!!!
-        func initDateFormatter() -> DateFormatter{
-            let format = DateFormatter()
-            format.locale = Locale(identifier: "Ja_JP")
-            format.dateFormat = "yyyy/MM/dd HH:mm:ss"
-            
-            return format
-        }
+        
     }
-}
-
-struct SimpleEntry: TimelineEntry {
-    let date: Date
-    let emergencyName: String
-    let emergencyStart: DateComponents
-    let emergencyDuration: DateComponents
-    init(date: Date, emergencyName: String, emergencyStart: DateComponents, emergencyDuration: DateComponents){
-        self.date = date
-        self.emergencyName = emergencyName
-        self.emergencyStart = emergencyStart
-        self.emergencyDuration = emergencyDuration
-    }
-    
 }
 
 struct m8sp105widgetEntryView : View {
@@ -81,8 +61,9 @@ struct m8sp105widgetEntryView : View {
     
 
     var body: some View {
-        let emergencyDate = Calendar.current.date(byAdding: entry.emergencyDuration, to: entry.date)!
+        let emergencyDate = SimpleEntry(date: Date())
 
+        let displayDate:Date = Calendar.current.date(byAdding: .second, value:0 ,to: emergencyDate.emergencyEnd)!
         ZStack{
             Color.init(backgroundColorName(serverState: serverState))
             VStack{
@@ -98,7 +79,7 @@ struct m8sp105widgetEntryView : View {
                     Image(systemName: "mentenance.xcassets")
                     Text("次の緊急は")
                 }
-                Text(emergencyDate, style: .timer)
+                Text(displayDate, style: .timer)
                     .fontWeight(.heavy)
                     .multilineTextAlignment(.center)
                     .font(.system(size: 40.0,design:.serif))
@@ -161,7 +142,7 @@ struct m8sp105widget: Widget {
 
 struct m8sp105widget_Previews: PreviewProvider {
     //staticは必ずつけること！！！
-    static var simpleEntry_Previews = SimpleEntry(date: Date(), emergencyName: "虚無より睨む原初の闇", emergencyStart: DateComponents(year:2021, month: 3, day: 5, hour: 19, minute: 0), emergencyDuration: DateComponents(minute: 15))
+    static var simpleEntry_Previews = SimpleEntry(date: Date())
     
     static var previews: some View {
         Group{
